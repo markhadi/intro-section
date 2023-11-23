@@ -98,9 +98,9 @@ main section div {
 }
 
 main section div h1 {
-  @apply text-AlmostBlack text-[36px] font-bold leading-none tracking-[-0.01em] mb-4
+  @apply text-AlmostBlack text-[36px] text-center font-bold leading-none tracking-[-0.01em] mb-4
             md:text-[52px] md:mb-9
-            lg:text-[80px] lg:mb-12;
+            lg:text-[80px] lg:mb-12 lg:text-left;
 }
 
 main section div p {
