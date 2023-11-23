@@ -7,27 +7,27 @@ const Navbar = () => {
     <nav>
       <section className="nav-mobile">
         <a href="/">
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo" />
         </a>
-        <img src={iconMenu} alt="" />
+        <img src={iconMenu} alt="Menu" />
       </section>
 
       <section className="nav-tablet">
         <div className="logo-and-menu">
           <a href="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="Logo" />
           </a>
           <ul>
             <li>
               <a href="/">
                 Features
-                <img src={iconArrowDown} alt="" />
+                <img src={iconArrowDown} alt="Arrow Down" />
               </a>
             </li>
             <li>
               <a href="/">
                 Company
-                <img src={iconArrowDown} alt="" />
+                <img src={iconArrowDown} alt="Arrow Down" />
               </a>
             </li>
             <li>

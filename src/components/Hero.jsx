@@ -11,7 +11,7 @@ const Hero = () => {
     <main>
       <picture>
         <source media="(min-width: 1024px)" srcSet={heroDesktop} />
-        <img src={heroMobile} alt="" />
+        <img src={heroMobile} alt="Hero Image" />
       </picture>
 
       <section>
@@ -23,10 +23,10 @@ const Hero = () => {
           </p>
           <button>Learn more</button>
           <span>
-            <img src={databiz} alt="" />
-            <img src={audiophiles} alt="" />
-            <img src={meet} alt="" />
-            <img src={maker} alt="" />
+            <img src={databiz} alt="Databiz Client" />
+            <img src={audiophiles} alt="Audiophiles Client" />
+            <img src={meet} alt="Meet Client" />
+            <img src={maker} alt="Maker Client" />
           </span>
         </div>
       </section>
