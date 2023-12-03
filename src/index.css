@@ -13,59 +13,48 @@
           lg:gap-[68px];
 }
 
+a {
+  @apply hover:text-AlmostBlack;
+}
+
 nav,
 main {
   @apply max-w-[1408px] w-full;
 }
 
-nav {
-  @apply flex justify-between text-MediumGray;
-}
-
-nav .nav-mobile {
+.nav-mobile {
   @apply flex justify-between px-4 w-full
           md:hidden;
 }
 
-nav .nav-mobile img {
-  @apply h-max cursor-pointer;
-}
-
-nav .nav-tablet {
+.nav-desktop {
   @apply hidden
           md:flex md:items-center md:justify-between md:w-full md:px-6;
 }
 
-nav .nav-tablet .logo-and-menu {
-  @apply flex gap-6 items-center
-          lg:gap-16;
+.menu {
+  @apply flex flex-col gap-7 h-max py-4 text-[14px]
+          md:flex-row 
+          lg:gap-[38px] lg:items-center;
 }
 
-nav .nav-tablet .logo-and-menu ul {
-  @apply flex items-center gap-7 h-max text-[14px]
-          lg:gap-[38px];
+.menu li a {
+  @apply flex items-center gap-2;
 }
 
-nav .nav-tablet .logo-and-menu ul li a {
-  @apply flex items-center gap-2  transition-all duration-300
-          hover:text-AlmostBlack;
-}
-
-nav .nav-tablet .logo-and-menu ul li a img {
+.menu li a img {
   @apply h-max;
 }
 
-nav .nav-tablet .auth {
-  @apply flex gap-10 items-center text-[14px];
+.auth {
+  @apply flex flex-col gap-4 py-6 items-center text-[14px]
+          md:flex-row md:gap-10 md:py-0;
 }
 
-nav .nav-tablet .auth a {
-  @apply transition-all duration-300 hover:text-AlmostBlack;
-}
-
-nav .nav-tablet .auth a.register {
-  @apply border border-MediumGray rounded-2xl grid place-content-center h-[42px] w-[104px]
-          hover:border-AlmostBlack;
+.auth .register {
+  @apply border border-MediumGray rounded-2xl grid place-content-center h-[42px] w-[196px]
+        hover:border-AlmostBlack
+          md:w-[104px];
 }
 
 main {
@@ -110,7 +99,7 @@ main section div p {
 }
 
 main section div button {
-  @apply grid place-content-center bg-AlmostBlack text-AlmostWhite text-[16px] font-bold tracking-[-0.01em] h-12 w-[136px] rounded-2xl mb-12 transition-all duration-300 
+  @apply grid place-content-center bg-AlmostBlack text-AlmostWhite text-[16px] font-bold tracking-[-0.01em] h-12 w-[136px] rounded-2xl mb-12  
         hover:bg-AlmostBlack/80
           md:h-14 md:w-[164px] md:text-[18px] md:mb-16
           lg:mb-[100px];

@@ -1,53 +1,47 @@
-import logo from "../assets/images/logo.svg";
 import iconMenu from "../assets/images/icon-menu.svg";
-import iconArrowDown from "../assets/images/icon-arrow-down.svg";
+
+import Menu from "./Menu";
+import Logo from "./Logo";
+import Auth from "./Auth";
+
+import { useState } from "react";
+import MenuMobile from "./MenuMobile";
 
 const Navbar = () => {
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuVisible(!mobileMenuVisible);
+  };
+
   return (
-    <nav>
+    <nav className="flex justify-between text-MediumGray">
       <section className="nav-mobile">
-        <a href="/">
-          <img src={logo} alt="Logo" />
-        </a>
-        <img src={iconMenu} alt="Menu" />
+        <Logo />
+        <img
+          src={iconMenu}
+          alt="Menu"
+          className="cursor-pointer h-max"
+          onClick={toggleMobileMenu}
+        />
       </section>
 
-      <section className="nav-tablet">
-        <div className="logo-and-menu">
-          <a href="/">
-            <img src={logo} alt="Logo" />
-          </a>
-          <ul>
-            <li>
-              <a href="/">
-                Features
-                <img src={iconArrowDown} alt="Arrow Down" />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                Company
-                <img src={iconArrowDown} alt="Arrow Down" />
-              </a>
-            </li>
-            <li>
-              <a href="/">Careers</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-          </ul>
+      <section className="nav-desktop">
+        <div
+          className="flex gap-6 items-center 
+                      lg:gap-16"
+        >
+          <Logo />
+          <Menu />
         </div>
 
-        <div className="auth">
-          <a href="/login" className="login">
-            Login
-          </a>
-          <a href="/register" className="register">
-            Register
-          </a>
-        </div>
+        <Auth />
       </section>
+
+      <MenuMobile
+        mobileMenuVisible={mobileMenuVisible}
+        toggleMobileMenu={toggleMobileMenu}
+      />
     </nav>
   );
 };
