@@ -57,6 +57,21 @@ main {
           md:w-[104px];
 }
 
+.menu-dropdown {
+  @apply relative shadow-none flex flex-col gap-4 p-6 bg-AlmostWhite rounded-lg w-max top-0 overflow-hidden
+            md:absolute md:shadow-2xl md:top-6;
+}
+
+.menu-dropdown-open {
+  @apply h-max !pb-0 
+          md:opacity-100 md:translate-y-0 md:z-10 md:!pb-6;
+}
+
+.menu-dropdown-close {
+  @apply translate-y-0 h-0 !py-0 
+          md:opacity-0 md:-translate-y-2 md:-z-10;
+}
+
 main {
   @apply flex flex-col items-center justify-center
           lg:flex-row;

@@ -6,9 +6,9 @@ import Auth from "./Auth";
 const MenuMobile = ({ mobileMenuVisible, toggleMobileMenu }) => {
   return (
     <section
-      className={`md:hidden ${
+      className={`${
         mobileMenuVisible ? "w-screen" : "w-0"
-      } fixed h-screen top-0 right-0 bg-AlmostBlack/50 overflow-hidden`}
+      } fixed h-screen top-0 right-0 bg-AlmostBlack/50 overflow-hidden md:hidden`}
     >
       <div className={`absolute right-0 h-full w-max px-6 bg-AlmostWhite`}>
         <div className="py-5 flex justify-end">
